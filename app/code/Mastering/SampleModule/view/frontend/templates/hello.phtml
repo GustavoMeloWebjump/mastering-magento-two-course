@@ -4,10 +4,16 @@
      */
 ?>
 
-<?php echo $block->getLabel(); ?>
+<h1><?php echo "List of pets" ?></h1>
 <?php foreach ($block->getItems() as $items): ?>
 <p>
-    <?php echo $items->getName(); ?>: <?php echo $items->getDescription(); ?>
+    <h2><?php echo "Pet: {$items->getId()}";?> </h2> <br />
+    <?php echo "name: {$items->getName()}" ; ?> <br />
+    <?php echo "Nickname: {$items->getNickname()}" ;  ?> <br />
+    <?php echo "Breed: {$items->getBreed()}";  ?> <br />
+    <?php echo "Age: {$items->getAge()}";  ?> <br />
+    <?php echo "Names owner: {$items->getNameOwner()}";  ?> <br />
+    <?php echo "type pet: {$items->getTypePet()}";  ?> <br />
 </p>
 <?php endforeach; ?>
 

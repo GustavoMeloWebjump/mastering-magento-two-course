@@ -18,24 +18,21 @@ class InstallSchema implements InstallSchemaInterface
             Table::TYPE_INTEGER,
             null,
             ['identity' => true, 'nullable' => false, 'primary' => true],
-            'Item ID'
+            'Pet ID'
         )->addColumn(
             'name',
             Table::TYPE_TEXT,
             255,
             ['nullable' => false],
-            'Item Name'
-        )->addColumn(
-            'description',
-            Table::TYPE_TEXT,
-            255,
-            ['nullable' => false],
-            'Item description'
-        )->addIndex(
+            'Pet Name'
+        )->addColumn('nickname', Table::TYPE_TEXT, 255, ['nullable' => false], 'Pet Nickname')->addColumn('breed', Table::TYPE_TEXT, 255, ['nullable' => false], 'Pet breed')->addColumn('age', Table::TYPE_INTEGER, 20, ['nullable' => false], 'Pet age')
+        ->addColumn('name_owner', Table::TYPE_TEXT, 255, ['nullable' => false], 'Pet owner name')
+        ->addColumn('type_pet', Table::TYPE_TEXT, 255, ['nullable' => false], 'Pet type')
+        ->addIndex(
             $setup->getIdxName('mastering_sample_item', ['name']),
             ['name']
         )->setComment(
-            'sample items'
+            'sample pets'
         );
 
         $setup->getConnection()->createTable($table);

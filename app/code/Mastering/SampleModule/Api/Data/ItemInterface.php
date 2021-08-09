@@ -10,5 +10,26 @@ interface ItemInterface
     /**
      * @return string
      */
-    public function getDescription();
+    public function getNickname();
+
+    /**
+     * @return string
+     */
+    public function getBreed();
+
+    /**
+     * @return int
+     */
+    public function getAge();
+
+    /**
+     * @return string
+     */
+    public function getNameOwner();
+
+    /**
+     * @return string
+    */
+    public function getTypePet();
+
 }
