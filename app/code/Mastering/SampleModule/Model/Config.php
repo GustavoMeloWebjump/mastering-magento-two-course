@@ -16,7 +16,7 @@ class Config {
 
     public function isEnabled()
     {
-        $this->config->getValue(self::XML_PATH_ENABLED);
+        return $this->config->getValue(self::XML_PATH_ENABLED);
     }
 
 }
