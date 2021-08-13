@@ -1,6 +1,9 @@
 <?php
 namespace Mastering\SampleModule\Model;
 
+/**
+ * @codeCoverageIgnore
+ */
 class Item extends \Magento\Framework\Model\AbstractModel implements \Magento\Framework\DataObject\IdentityInterface
 {
     const CACHE_TAG = 'mastering_samplemodule_item';

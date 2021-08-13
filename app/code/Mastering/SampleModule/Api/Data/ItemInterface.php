@@ -1,6 +1,9 @@
 <?php
 namespace Mastering\SampleModule\Api\Data;
 
+/**
+ * @codeCoverageIgnore
+ */
 interface ItemInterface
 {
     /**
@@ -9,6 +12,7 @@ interface ItemInterface
     public function getName();
     /**
      * @return string
+     * @codeCoverageIgnore
      */
     public function getDescription();
 }

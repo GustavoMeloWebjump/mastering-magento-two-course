@@ -3,6 +3,9 @@ namespace Mastering\SampleModule\Observer;
 
 use Psr\Log\LoggerInterface;
 
+/**
+ * @codeCoverageIgnore
+ */
 class Logger implements \Magento\Framework\Event\ObserverInterface
 {
 

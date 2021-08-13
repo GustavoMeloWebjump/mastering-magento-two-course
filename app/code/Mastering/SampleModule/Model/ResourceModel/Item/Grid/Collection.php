@@ -6,6 +6,9 @@ use Magento\Framework\Data\Collection\EntityFactory;
 use Magento\Framework\Event\ManagerInterface;
 use Psr\Log\LoggerInterface as Logger;
 
+/**
+ * @codeCoverageIgnore
+ */
 class Collection extends \Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult {
     public function __construct(EntityFactory $entityFactory, Logger $logger,
         FetchStrategy $fetchStrategy,
